@@ -8,6 +8,7 @@
   position: relative;
   flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
+  min-width: 370px;
 }
 
 .service-list__title {

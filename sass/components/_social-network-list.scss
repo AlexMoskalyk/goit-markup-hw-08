@@ -1,9 +1,14 @@
 .social-network-list {
-  padding-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+
+  padding-top: 16px;
   fill: $primary-text-colour;
+}
+
+.social-network-list__item:not(:first-child) {
+  margin-left: 10px;
 }
 
 .social-network-list__link {
