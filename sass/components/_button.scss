@@ -1,15 +1,16 @@
 .button {
   display: block;
   border-radius: 4px;
-  padding: 11px 34px;
+  padding: 10px 32px;
   min-width: 136px;
   border: none;
 
   color: $bg-colour;
   background-color: $accent-blue-colour;
+
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
 }
