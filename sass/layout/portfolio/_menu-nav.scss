@@ -1,0 +1,31 @@
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.menu-nav__button {
+  display: block;
+  min-width: 73px;
+
+  color: $secondary-text-colour;
+  background-color: $background-our-team-section;
+  /* cursor: pointer; */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $bg-colour;
+    background-color: $accent-blue-colour;
+  }
+}
+
+.menu-nav__item:not(:last-child) {
+  margin-right: 8px;
+}
