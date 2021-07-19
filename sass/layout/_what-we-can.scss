@@ -1,5 +1,9 @@
 .what-we-can {
-  padding-top: 47px;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: contents;
+  }
 }
 
 .what-we-can__title {
