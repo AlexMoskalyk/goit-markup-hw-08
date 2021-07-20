@@ -1,8 +1,23 @@
 .menu-nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+  margin-left: -8px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
+
+// .menu-nav__item:not(:last-child) {
+// }
+
+.menu-nav__item {
+  margin-bottom: 15px;
+  margin-left: 8px;
+}
+
 .menu-nav__button {
   display: block;
   min-width: 73px;
@@ -24,8 +39,4 @@
     color: $bg-colour;
     background-color: $accent-blue-colour;
   }
-}
-
-.menu-nav__item:not(:last-child) {
-  margin-right: 8px;
 }
