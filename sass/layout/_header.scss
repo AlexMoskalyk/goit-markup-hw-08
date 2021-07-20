@@ -1,18 +1,56 @@
 /* стили header  */
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border: 1px solid #ececec;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  & .mob-menu-open-btn {
+    background: unset;
+    border: none;
+
+    &:hover {
+      fill: $accent-blue-colour;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
 }
+
 .header--flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    & .header__nav--flex {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .header__nav--flex {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
-.header__nav--flex {
-  display: flex;
-  align-items: center;
-}
+// .header__nav--flex {
+//   display: flex;
+//   align-items: center;
+// }
 
 /* logo*/
 
@@ -20,13 +58,14 @@
   color: $accent-blue-colour;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
+  // min-width: 134px;
 
-  display: inline-block;
-  margin-right: 93px;
+  display: flex;
+  // margin-right: 88px;
 }
 
 .header__logo--inverse {
@@ -35,82 +74,238 @@
 
 /* навигация сайта header */
 
-.site-nav__link--active {
-  position: relative;
-  color: $accent-blue-colour;
-}
+// .site-nav__link--active {
+//   position: relative;
+//   color: $accent-blue-colour;
+// }
 
-.site-nav__link--active::after {
-  content: ''; /* обязательный элемент, чтоб работал псевдоэлемент */
+// .site-nav__link--active::after {
+//   content: ''; /* обязательный элемент, чтоб работал псевдоэлемент */
 
-  position: absolute;
-  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-  bottom: -33px;
-  width: 100%; /*задаём длинну линии до наведения курсора*/
-  height: 4px; /*задаём ширину линии*/
-  background-color: $accent-blue-colour; /*задаём цвет линии*/
-}
+//   position: absolute;
+//   left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+//   bottom: -33px;
+//   width: 100%; /*задаём длинну линии до наведения курсора*/
+//   height: 4px; /*задаём ширину линии*/
+//   background-color: $accent-blue-colour; /*задаём цвет линии*/
+// }
 
 .site-nav {
-  display: flex;
-  align-items: center;
-}
+  display: none;
 
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
 
-.site-nav__link {
-  color: $secondary-text-colour;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+    & .site-nav__item:not(:last-child) {
+      margin-right: 50px;
+    }
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    & .site-nav__link {
+      color: $secondary-text-colour;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: $accent-blue-colour;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-blue-colour;
+      }
+    }
+
+    & .site-nav__link--active {
+      position: relative;
+      color: $accent-blue-colour;
+
+      &::after {
+        content: ''; /* обязательный элемент, чтоб работал псевдоэлемент */
+
+        position: absolute;
+        left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        bottom: -28px;
+        width: 100%; /*задаём длинну линии до наведения курсора*/
+        height: 4px; /*задаём ширину линии*/
+        background-color: $accent-blue-colour; /*задаём цвет линии*/
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+
+    & .site-nav__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    & .site-nav__link {
+      color: $secondary-text-colour;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-blue-colour;
+      }
+    }
+
+    & .site-nav__link--active {
+      position: relative;
+      color: $accent-blue-colour;
+
+      &::after {
+        content: ''; /* обязательный элемент, чтоб работал псевдоэлемент */
+        position: absolute;
+        left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        bottom: -33px;
+        width: 100%; /*задаём длинну линии до наведения курсора*/
+        height: 4px; /*задаём ширину линии*/
+        background-color: $accent-blue-colour; /*задаём цвет линии*/
+      }
+    }
   }
 }
+
+// .site-nav__item:not(:last-child) {
+//   margin-right: 50px;
+// }
+
+// .site-nav__link {
+//   color: $secondary-text-colour;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   text-decoration: none;
+
+//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:hover,
+//   &:focus {
+//     color: $accent-blue-colour;
+//   }
+// }
 
 /* контакты в хедере  */
 
 .kontakt-nav {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
+  display: none;
 
-.kontakt-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: flex-start;
 
-.kontakt-nav__link {
-  display: flex;
-  align-items: center;
-  color: $primary-text-colour;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+    & .kontakt-nav__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-  fill: $primary-text-colour;
+    & .kontakt-nav__link {
+      display: flex;
+      align-items: center;
+      color: $primary-text-colour;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      fill: $primary-text-colour;
 
-  &:hover,
-  &:focus {
-    color: $accent-blue-colour;
-    fill: $accent-blue-colour;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-blue-colour;
+        fill: $accent-blue-colour;
+      }
+    }
+
+    & .kontakt-nav__icon {
+      margin-right: 10px;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+
+    & .kontakt-nav__item:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: unset;
+    }
+
+    & .kontakt-nav__link {
+      display: flex;
+      align-items: center;
+      color: $primary-text-colour;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      fill: $primary-text-colour;
+
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-blue-colour;
+        fill: $accent-blue-colour;
+      }
+    }
+
+    & .kontakt-nav__icon {
+      margin-right: 10px;
+
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 
-.kontakt-nav__icon {
-  margin-right: 10px;
+// .kontakt-nav__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+// .kontakt-nav__link {
+//   display: flex;
+//   align-items: center;
+//   color: $primary-text-colour;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   text-decoration: none;
+
+//   fill: $primary-text-colour;
+
+//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:hover,
+//   &:focus {
+//     color: $accent-blue-colour;
+//     fill: $accent-blue-colour;
+//   }
+// }
+
+// .kontakt-nav__icon {
+//   margin-right: 10px;
+
+//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }

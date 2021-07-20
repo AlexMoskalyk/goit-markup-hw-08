@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <!-- <header class="header section">
+    <header class="header section">
       <div class="container header--flex">
         <nav class="nav header__nav--flex">
           <a href="./index.html" class="logo header__logo">
@@ -54,8 +54,63 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="mob-menu-open-btn">
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <button type="button" class="mob-menu__close-btn">
+            <svg width="40" height="40" class="modal__close-btn-icon">
+              <use href="./images/sprite.svg#icon-close-black-18dp-2-1-1"></use>
+            </svg>
+          </button>
+      
+          <ul class="mob-menu-nav-list" >
+            <li class="mob-menu-nav-list__item">
+              <a href="#" class="mob-menu-nav-list__link mob-menu-nav-list__link--active">Студия</a>
+            </li>
+            <li class="mob-menu-nav-list__item">
+              <a href="#" class="mob-menu-nav-list__link">Портфолио</a>
+            </li>
+            <li class="mob-menu-nav-list__item">
+              <a href="#" class="mob-menu-nav-list__link">Контакты</a>
+            </li>
+          </ul>
+      
+          <div class="mob-menu__bottom">
+            <ul class="mob-menu-contact-list">
+              <li class="mob-menu-contact-list__item">
+                <a href="#" class="mob-menu-contact-list__link mob-menu-contact-list__link--size--big">+38 096 111 11 11</a>
+              </li>
+              <li class="mob-menu-contact-list__item">
+                <a href="#" class="mob-menu-contact-list__link">info@devstudio.com</a>
+              </li>
+            </ul>
+      
+            <ul class="mob-menu-social-net-list">
+              <li class="mob-menu-social-net-list__item">
+                <a href="#" class="mob-menu-social-net-list__link">Instagram</a>
+              </li>
+              <li class="mob-menu-social-net-list__item">
+                <a href="#" class="mob-menu-social-net-list__link">Twitter</a>
+              </li>
+              <li class="mob-menu-social-net-list__item">
+                <a href="#" class="mob-menu-social-net-list__link">Facebook</a>
+              </li>
+              <li class="mob-menu-social-net-list__item">
+                <a href="#" class="mob-menu-social-net-list__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </header>
 
     <main>
       <section class="hero">
@@ -355,11 +410,11 @@
       </section>
     </main>
 
-    <!-- <footer class="section footer">
+    <footer class="section footer">
       <div class="container">
         <div class="footer__flexbox">
           <div class="footer__adress-container">
-            <a href="./index.html" class="logo footer__logo">
+            <a href="./index.html" class=" footer__logo">
               Web<span class="footer__logo-inverse">Studio</span>
             </a>
             <address class="footer__address">
@@ -382,7 +437,7 @@
           <div class="social-network-container">
             <h3 class="social-network-container__title">присоединяйтесь</h3>
             <ul class="social-network-list footer__social-network-list">
-              <li>
+              <li  class="social-network-list__item">
                 <a href="#" class="social-network-list__link social-network-list__link--bg--color">
                   <svg
                     width="20"
@@ -393,7 +448,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li  class="social-network-list__item">
                 <a href="#" class="social-network-list__link social-network-list__link--bg--color">
                   <svg
                     width="20"
@@ -404,7 +459,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li  class="social-network-list__item">
                 <a href="#" class="social-network-list__link social-network-list__link--bg--color">
                   <svg
                     width="20"
@@ -415,7 +470,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li  class="social-network-list__item">
                 <a href="#" class="social-network-list__link social-network-list__link--bg--color">
                   <svg
                     width="20"
@@ -453,7 +508,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -524,6 +579,7 @@
         </form>
       </div>
     </div> -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/mob-menu.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
