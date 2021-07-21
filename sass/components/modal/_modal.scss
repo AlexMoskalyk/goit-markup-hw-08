@@ -6,10 +6,15 @@
 
   padding: 40px 39px 40px 41px;
 
-  min-height: 581px;
-  min-width: 528px;
+  min-height: 609px;
+  min-width: 450px;
 
   background-color: white;
+
+  @media screen and (min-width: 1200px) {
+    min-height: 581px;
+    min-width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -122,13 +127,17 @@
   display: flex;
   align-items: center;
 
-  font-size: 14px;
-  line-height: 1.71;
-  /* identical to box height, or 171% */
+  font-size: 12px;
+  line-height: 1.17;
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: $primary-text-colour;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__input-check-icon-wrapper {
@@ -151,12 +160,17 @@
 }
 
 .modal-form__check-link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
 
   color: #2196f3;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__btn-submit {

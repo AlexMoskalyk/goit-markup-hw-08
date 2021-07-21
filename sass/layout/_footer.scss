@@ -2,13 +2,37 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $secondary-bg-colour;
+
+  // @media screen and (min-width: 1200px) {
+  //   padding-top: 60px;
+  //   padding-bottom: 60px;
+  // }
 }
 
-// .footer__flexbox {
-//   display: flex;
-// }
+.footer__flexbox {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: unset;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .footer__adress-container {
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 164px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: unset;
+    margin-bottom: unset;
+  }
 }
 
 /* футер лого  */
@@ -26,6 +50,10 @@
   padding-bottom: 0px;
   display: block;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: unset;
+  }
 }
 
 .footer__logo-inverse {
@@ -42,6 +70,10 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    text-align: unset;
+  }
 }
 
 .footer__item {
@@ -50,12 +82,24 @@
 
 // -----------footer контейнер соц сетей-------
 .social-network-container {
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
+  // width: 206px;
+  // height: 80px;
+  // margin-left: 70px;
   display: block;
   margin: 0 auto;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: unset;
+
+    width: 206px;
+    height: 80px;
+    margin-left: 70px;
+  }
 }
 
 .social-network-container__title {
@@ -67,6 +111,10 @@
   text-transform: uppercase;
   padding-bottom: 20px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: unset;
+  }
 }
 
 .footer__social-network-list {
@@ -85,5 +133,15 @@
   &:hover,
   &:focus {
     fill: $bg-colour;
+  }
+}
+
+.footer__subscription-form-container {
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: unset;
   }
 }

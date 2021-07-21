@@ -4,6 +4,11 @@
   padding-bottom: 16px;
   border: 1px solid #ececec;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
   @media screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 25px;
@@ -217,8 +222,8 @@
       align-items: center;
       color: $primary-text-colour;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
+      font-size: 12px;
+      line-height: 1.17;
       letter-spacing: 0.02em;
       text-decoration: none;
 
