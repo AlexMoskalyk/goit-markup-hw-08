@@ -850,6 +850,7 @@ body {
 @media screen and (min-width: 1200px) {
   .features {
     padding-bottom: 94px;
+    background-image: linear-gradient(to bottom, #fff5f6 50%, #ffffff 50%);
   }
 }
 
